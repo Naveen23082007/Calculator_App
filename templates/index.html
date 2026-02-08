@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator App</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            background-color: aquamarine;
+        }
+        h2{
+            margin-bottom: 3em;
+            font-size: xx-large;
+        }
+        input{
+            width: 300px;
+            height: 25px;
+            padding-left: 10px;
+            border: 2px solid blue;
+            border-radius: 10px;
+            margin-bottom: 3em;
+        }
+        .operation{
+            width: 80px;
+            height: 40px;
+            padding-left: 10px;
+            border: 2px solid blue;
+            border-radius: 10px;
+            margin-bottom: 2em;
+            font-size: large;
+        }
+        button{
+            background:blue;
+            color:white;
+            width:150px;
+            height:45px;
+            border:none;
+            border-radius:8px;
+            margin-bottom:15px;
+            transition:0.3s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    button:hover{
+        background:green;
+        transform:scale(1.15);
+    }
+    .purple{
+        color: purple;
+    }
+    </style>
+</head>
+
+<body>
+    <form method="post">
+        <h2>Calculator For Flask</h2>
+        <input type="number" name="num1" placeholder="Enter First Value"><br>
+        <select name="operation" class="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+        </select><br>
+        <input type="number" name="num2" placeholder="Enter Second Value"><br>
+        <button type="submit">Calculate</button>
+</form>
+        {% if result is not none %}
+        <h2 class="purple">Result: {{ result }}</h2>
+        {% endif %}
+</body>
+</html>
